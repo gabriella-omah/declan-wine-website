@@ -9,18 +9,51 @@
 const overlay = document.getElementById("overlay");
 const body = document.body;
 
+let scrollPosition = 0;
+
+/* =========================
+   LIGHTBOX SCROLL LOCK
+========================= */
+
+function lockScroll(){
+
+  scrollPosition = window.scrollY;
+
+  body.style.top = `-${scrollPosition}px`;
+  body.classList.add("no-scroll");
+
+}
+
+function unlockScroll(){
+
+  body.classList.remove("no-scroll");
+
+  body.style.top = "";
+
+  /* temporarily disable smooth scroll */
+  document.documentElement.style.scrollBehavior = "auto";
+
+  window.scrollTo(0, scrollPosition);
+
+  /* restore smooth scroll */
+  setTimeout(() => {
+    document.documentElement.style.scrollBehavior = "smooth";
+  }, 0);
+
+}
+
+/* =========================
+   OVERLAY
+========================= */
+
 function showOverlay(){
   overlay.classList.add("show");
-  body.classList.add("no-scroll");
 }
 
 function hideOverlay(){
   overlay.classList.remove("show");
-  body.classList.remove("no-scroll");
 }
 
-
-let openCategoryIndex = null;
 
 /* =========================
    CATEGORY TOGGLE + OUTSIDE CLOSE
@@ -119,43 +152,40 @@ const observer = new IntersectionObserver((entries) => {
   threshold: 0.15
 });
 
-sections.forEach(section => observer.observe(section));document.querySelectorAll('a[href^="#"]').forEach(link => {
+sections.forEach(section => observer.observe(section));
+
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+
   link.addEventListener("click", function(e) {
-    e.preventDefault();
 
-    const target = document.querySelector(this.getAttribute("href"));
+    const href = this.getAttribute("href");
 
-    if (target) {
+    /* Ignore empty or invalid hashes */
+    if(href === "#" || href.length <= 1) return;
+
+    const target = document.querySelector(href);
+
+    if(target){
+
+      e.preventDefault();
+
       target.scrollIntoView({
         behavior: "smooth",
         block: "start"
       });
+
+      /* ONLY close menu if menu is open */
+      if(menu.classList.contains("open")){
+        closeMenu();
+      }
+
     }
+
   });
+
 });
 
-const links = document.querySelectorAll("a[href^='#']");
 
-
-links.forEach(link => {
-  link.addEventListener("click", (e) => {
-    e.preventDefault();
-
-    const targetId = link.getAttribute("href").replace("#", "");
-
-    // fade out current
-    const current = document.querySelector(".section.active");
-    if (current) current.classList.remove("active");
-
-    // fade in new
-    const next = document.getElementById(targetId);
-    if (next) {
-      setTimeout(() => {
-        next.classList.add("active");
-      }, 250); // gives fade-out feel first
-    }
-  });
-});
 
 
 /* =========================
@@ -234,13 +264,23 @@ const menu = document.querySelector(".mobile-menu");
 const hamburger = document.querySelector(".hamburger");
 
 function openMenu(){
+
   menu.classList.add("open");
-  showOverlay();
+
+  overlay.classList.add("show");
+
+  body.style.overflow = "hidden";
+
 }
 
 function closeMenu(){
+
   menu.classList.remove("open");
-  hideOverlay();
+
+  overlay.classList.remove("show");
+
+  body.style.overflow = "";
+
 }
 
 if(hamburger){
@@ -419,11 +459,16 @@ badge: ""
 ========================= */
 
 function openWine(i){
+
   const wine = wines[i - 1];
 
   const lightbox = document.getElementById("lightbox");
+
   lightbox.classList.add("open");
+
   showOverlay();
+
+  lockScroll();
 
   document.getElementById("wineImage").src = wine.image;
   document.getElementById("wineTitle").innerText = wine.name;
@@ -445,11 +490,17 @@ function openWine(i){
       <div><b>Price:</b> ${wine.price}</div>
     </div>
   `;
+
 }
 
 function closeBox(){
+
   document.getElementById("lightbox").classList.remove("open");
+
   hideOverlay();
+
+  unlockScroll();
+
 }
 
 /* =========================
