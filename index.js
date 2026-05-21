@@ -256,9 +256,6 @@ toggleBtn.addEventListener("click", () => {
    MOBILE MENU
 ========================= */
 
-/* =========================
-   MOBILE MENU (FINAL)
-========================= */
 
 const menu = document.querySelector(".mobile-menu");
 const hamburger = document.querySelector(".hamburger");
