@@ -145,7 +145,8 @@ body.fade-out {
 /* LOCK BODY SCROLL WHEN MODAL / MENU OPEN */
 .no-scroll{
   overflow: hidden;
-  height: 100vh;
+  position: fixed;
+  width: 100%;
 }
 
 /* Overlay base */
@@ -200,6 +201,7 @@ body.fade-out {
 }
 
 /* ================= CENTER LOGO ================= */
+
 .header .logo{
   position:absolute;
   left:50%;
@@ -348,7 +350,9 @@ body.fade-out {
 .header .hamburger:hover {
   transform: translateY(-1px);
 }
-
+html{
+  scroll-behavior:auto;
+}
 
 /* ================= MOBILE MENU ================= */
 
@@ -585,7 +589,7 @@ body.fade-out {
   display: flex;
   flex-direction: column;
   gap: 18px;
-  padding: 26px;
+  padding: 30px;
   border-radius: var(--radius-md);
   background: linear-gradient(
     145deg,
@@ -608,11 +612,11 @@ body.fade-out {
 .lifestyle .lifestyle-cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 14px;
+  gap: 20px;
 }
 
 .lifestyle .card {
-  padding: 16px 16px 14px;
+  padding: 22px 20px ;
   border-radius: var(--radius-md);
   background: linear-gradient(
     135deg,
@@ -643,7 +647,7 @@ body.fade-out {
 }
 
 .lifestyle .card p {
-  font-size: 13px;
+  font-size: 13.5px;
   line-height: 1.5;
   color: var(--text-muted);
   margin: 0;
@@ -752,7 +756,7 @@ body.fade-out {
   justify-content:space-between;
   align-items:center;
   gap:20px;
-  padding: 35px 10px 10px;
+  padding: 40px 10px 10px;
 }
 
 .wine .category h3{
@@ -1012,110 +1016,73 @@ body.fade-out {
 /* ================= WHY DECLAN ================= */
 
 .craft {
-  padding: 100px 20px;
+  padding: 120px 20px;
+  background: var(--bg-section);
   position: relative;
   overflow: hidden;
-  background: var(--bg-section);
 }
 
-.craft::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(circle at 20% 20%, rgba(255,255,255,0.9), transparent 60%),
-    radial-gradient(circle at 80% 30%, rgba(200,169,106,0.10), transparent 65%),
-    radial-gradient(circle at 50% 90%, rgba(0,0,0,0.03), transparent 70%);
-  pointer-events: none;
-}
-
-.craft-content {
-  position: relative;
-  z-index: 2;
+.craft .craft-content {
   max-width: 1000px;
   margin: 0 auto;
   text-align: center;
 }
 
 .craft .craft-intro {
-  max-width: 720px;
-  margin: 0 auto 80px;
+  max-width: 700px;
+  margin: 0 auto 70px;
 }
 
 .craft .eyebrow {
   color: var(--accent-gold);
+  letter-spacing: 2px;
 }
 
 .craft .craft-intro h2 {
   font-size: 44px;
-  line-height: 1.25;
+  margin: 14px 0;
   color: var(--text-dark);
-  margin-bottom: 14px;
   text-transform: capitalize;
 }
 
 .craft .craft-intro p {
   font-size: 14px;
+  color: var(--text-muted);
   line-height: 1.7;
-  color: var(--text-muted);
-  max-width: 620px;
-  margin: 0 auto;
 }
 
-.craft .craft-points {
+.craft .craft-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 40px;
-  max-width: 900px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  margin-top: 20px;
+}
+
+.craft .craft-item {
+  text-align: center;
+  padding: 10px;
+}
+
+.craft .craft-item i {
+  font-size: 26px;
+  color: var(--accent-gold);
+  margin-bottom: 16px;
+}
+
+.craft .craft-item h3 {
+  font-size: 18px;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.craft .craft-item p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  max-width: 240px;
   margin: 0 auto;
 }
-
-.craft .craft-point {
-  text-align: left;
-  padding: 10px 0;
-}
-
-.craft .craft-point::before,
-.craft .craft-point::after {
-  display: none;
-}
-
-.craft .craft-point h3 {
-  font-size: 20px;
-  font-weight: 600;
-  color: var(--accent-burgundy);
-  margin-bottom: 10px;
-  position: relative;
-}
-
-.craft .craft-point h3:before {
-  content: "";
-  display: block;
-  width: 30px;
-  height: 2px;
-  margin-bottom: 10px;
-  background: linear-gradient(
-    90deg,
-    #c8a96a,
-    rgba(200,169,106,0.25)
-  );
-}
-
-.craft .craft-point p {
-  font-size: 14px;
-  line-height: 1.85;
-  color: var(--text-muted);
-  max-width: 240px;
-}
-
-.craft .craft-point:nth-child(2) {
-  transform: translateY(14px);
-}
-
-.craft .craft-point:nth-child(3) {
-  transform: translateY(-10px);
-}
-
 
 /* ================= TESTIMONIALS ================= */
 
@@ -1225,6 +1192,21 @@ body.fade-out {
   transform: scale(1.2);
 }
 
+.testimonial-slide {
+  position: relative;
+  padding: 40px 20px;
+}
+
+.testimonial-slide::before {
+  content: "“";
+  position: absolute;
+  top: -20px;
+  left: 10px;
+  font-size: 120px;
+  color: rgba(200,169,106,0.15);
+  font-family: serif;
+}
+
 
 /* ================= STOCKIST ================= */
 
@@ -1232,29 +1214,38 @@ body.fade-out {
   padding:100px 20px;
   position:relative;
   overflow:hidden;
-  background:var(--bg-section);
+  background: 
+    linear-gradient(
+      180deg,
+      rgba(10, 10, 10, 0.55),
+      rgba(10, 10, 10, 0.75)
+    ),
+    url("/image/hero.jpg") center/cover no-repeat;
+
+  filter: saturate(1.1);
 }
 
-.stockist .stockist::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:url("/image/team.jpg") center/cover no-repeat;
-  opacity:0.12;
-  filter: grayscale(100%) contrast(120%);
-  z-index:0;
+.stockist::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(200,169,106,0.25), transparent 55%),
+    radial-gradient(circle at 80% 70%, rgba(255,215,140,0.15), transparent 60%),
+    radial-gradient(circle at 50% 50%, rgba(90,0,0,0.10), transparent 70%);
+  z-index: 0;
 }
 
-.stockist .stockist::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background: linear-gradient(
-    180deg,
-    rgba(246,239,232,0.85),
-    rgba(246,239,232,0.95)
+.stockist::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    transparent 40%,
+    rgba(0,0,0,0.55) 100%
   );
-  z-index:1;
+  z-index: 1;
 }
 
 .stockist .stockist-content{
@@ -1272,7 +1263,7 @@ body.fade-out {
   top:0;
   left:50%;
   transform:translateX(-50%);
-  width:150px;
+  width:140px;
   height:5px;
   background: linear-gradient(
     90deg,
@@ -1285,14 +1276,15 @@ body.fade-out {
 .stockist .stockist-card{
   position:relative;
   padding:90px 70px;
-  border-radius:var(--radius-md);
-  background: rgba(18, 18, 18, 0.95);
-  backdrop-filter: blur(18px);
-  border:1px solid rgba(200,169,106,0.25);
+  background: rgba(10, 10, 10, 0.82);
+  backdrop-filter: blur(22px);
+
+  border: 1px solid rgba(200,169,106,0.25);
   box-shadow:
-    0 30px 70px rgba(0,0,0,0.18),
+    0 40px 120px rgba(0,0,0,0.35),
     inset 0 1px 0 rgba(255,255,255,0.05);
-  transition:0.4s ease;
+
+  transition: 0.4s ease;
 }
 
 .stockist .eyebrow{
@@ -1418,25 +1410,25 @@ body.fade-out {
 .faq .faq-question{
   width:100%;
   text-align:left;
-  padding:20px 20px;
+  padding:20px 60px 20px 20px; /* extra right space */
   font-size:15px;
   background:none;
   border:none;
   cursor:pointer;
   color:var(--text-dark);
   position:relative;
-  gap: 40px;
-  line-height: 1.7;
+  line-height:1.7;
 }
 
 .faq .faq-question::after{
   content:"+";
   position:absolute;
   right:20px;
+  top:50%;
+  transform:translateY(-50%);
   font-size:22px;
   color:var(--accent-gold);
   transition:.3s ease;
-  margin-top: -5px;
 }
 
 .faq .faq-card.active .faq-question::after{
@@ -1496,14 +1488,6 @@ body.fade-out {
 
 
 /* ================= SHOP ================= */
-
-.seo-hidden{
-  position:absolute;
-  width:1px;
-  height:1px;
-  overflow:hidden;
-  clip:rect(0,0,0,0);
-}
 
 .shop{
   position:relative;
@@ -1782,7 +1766,7 @@ body.fade-out {
   font-size: 14px;
   color: var(--text-secondary);
   text-decoration: none;
-  margin: 6px 0;
+  margin-bottom:6px ;
   transition: 0.4s ease;
 }
 
@@ -2032,11 +2016,11 @@ body.fade-out {
 }
 
 .header .logo img{
-  height:48px;
+  height:50px;
 }
 
 .header.scrolled .logo img{
-  height:36px;
+  height:39px;
 }
 
 .header .nav-left,
@@ -2047,6 +2031,8 @@ body.fade-out {
 .header .hamburger {
   display: flex;
   margin-left:auto;
+  position: relative;
+  z-index: 4000;
 }
 
 .about {
@@ -2117,7 +2103,6 @@ body.fade-out {
 
 .wine .wine-layout{
   gap:50px;
-
 }
 
 .wine .hero-bottle{
@@ -2135,10 +2120,6 @@ body.fade-out {
 
 .wine .category{
   padding: 0;
-}
-
-.wine .category-head{
-  gap:20px;
 }
 
 .wine .category-head div{
@@ -2227,13 +2208,13 @@ body.fade-out {
   margin-bottom: 10px;
 }
 
-.craft .craft-points {
+.craft .craft-grid {
   grid-template-columns: 1fr;
   justify-items: center;
   gap: 40px;
 }
 
-.craft .craft-point {
+.craft .craft-item {
   text-align: center;
   max-width: 500px;
   justify-items: center;
@@ -2241,17 +2222,17 @@ body.fade-out {
   box-shadow: var(--shadow-soft);
 }
 
-.craft .craft-point h3 {
+.craft .craft-item h3 {
   font-size: 20px;
 }
 
-.craft .craft-point p {
+.craft .craft-item p {
   max-width: 100%;
   line-height: 1.5 ;
 }
 
-.craft .craft-point:nth-child(2),
-.craft .craft-point:nth-child(3) {
+.craft .craft-item:nth-child(2),
+.craft .craft-item:nth-child(3) {
   transform: none;
 }
 
@@ -2498,6 +2479,14 @@ body.fade-out {
   padding: 10px 12px;
 }
 
+.heaser{
+  height: 80px;
+}
+
+.header.scrolled{
+  height:70px;
+}
+
 .hero .hero-title {
   font-size: 34px;
 }
@@ -2523,7 +2512,7 @@ body.fade-out {
 }
 
 .lifestyle {
-  padding: 60px 50px;
+  padding: 60px 40px;
 }
 
 .lifestyle .lifestyle-intro {
@@ -2569,11 +2558,18 @@ body.fade-out {
   margin-bottom:10px;
 }
 
+.wine .wine-right{
+  padding:15px;
+}
+
 .wine .category h3{
   font-size:23px;
   margin-bottom: 10px;
 }
 
+.wine .category-head .btn-primary{
+  margin-top: -10px;
+}
 .lightbox .lightbox-content{
   scrollbar-width:thin;
   scrollbar-color: var(--accent-gold) rgba(0,0,0,0.05);
@@ -2680,11 +2676,11 @@ body.fade-out {
   font-size: 30px;
 }
 
-.craft .craft-points {
+.craft .craft-grid {
   gap: 30px;
 }
 
-.craft .craft-point h3 {
+.craft .craft-item h3 {
   font-size: 22px;
 }
 
@@ -2752,7 +2748,7 @@ body.fade-out {
 }
 
 .shop{
-  padding:60px 40px;
+  padding:60px 30px;
 }
 
 .shop .cta-grid{
@@ -2880,9 +2876,15 @@ body.fade-out {
 
 .wine .category-head{
   flex-direction: column;
+  align-items: flex-start; /* THIS is the key fix */
+  gap: 12px;
+}
+
+.wine .btn-primary{
+  align-self: flex-start; /* forces button to left inside flex parent */
+}
 }
   
-}
 
 
 /* =========================================================
