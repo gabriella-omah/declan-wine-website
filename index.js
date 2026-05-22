@@ -290,7 +290,7 @@ if(hamburger){
 const wines = [
 {
 name: "Declan Sweet Red",
-image: "image/drink.png",
+image: "image/drink8.png",
 tagline: "Juicy sweet red bursting with berry & cherry flavours.",
 details: "Smooth and vibrant red wine crafted for joyful moments with lush cherry, strawberry and soft spice notes.",
 abv: "11–12%",
@@ -306,7 +306,7 @@ badge: "BESTSELLER"
 },
 {
 name: "Declan Sweet White",
-image: "image/drink.png",
+image: "image/drink4.png",
 tagline: "Silky white wine with peach & tropical fruit notes.",
 details: "Refreshing white wine with peach, pineapple and citrus blossom.",
 abv: "11%",
@@ -322,7 +322,7 @@ badge: ""
 },
 {
 name: "Declan Moscato",
-image: "image/drink.png",
+image: "image/drink3.png",
 tagline: "Light, refreshing and beautifully fruity Moscato.",
 details: "Floral, sweet and tropical with soft aromatic finish.",
 abv: "7.5–11%",
@@ -338,7 +338,7 @@ badge: ""
 },
 {
 name: "Cabernet Sauvignon",
-image: "image/drink.png",
+image: "image/drink7.png",
 tagline: "Bold red wine with dark berry richness.",
 details: "Full-bodied wine with blackcurrant, plum and oak spice.",
 abv: "12–13%",
@@ -353,24 +353,8 @@ price: "₦9,000 – ₦12,000",
 badge: "PREMIUM"
 },
 {
-name: "Ice Rosé",
-image: "image/drink.png",
-tagline: "Sweet sparkling rosé made for celebration.",
-details: "Pink bubbly with strawberry, raspberry and floral notes.",
-abv: "11–12%",
-sizes: ["75cl"],
-sweetness: "Semi-sweet",
-origin: "Sparkling blend",
-pairing: "Seafood, brunch, desserts",
-serving: "5–7°C (ice cold)",
-occasion: "Parties, weddings",
-cooking: "Not used in cooking",
-price: "₦10,655 – ₦13,623",
-badge: "PREMIUM"
-},
-{
 name: "Rosé Sparkling",
-image: "image/drink.png",
+image: "image/drink6.png",
 tagline: "Fresh celebratory bubbly rosé.",
 details: "Light sparkling wine with fruity aroma and lively bubbles.",
 abv: "11–12%",
@@ -386,7 +370,7 @@ badge: ""
 },
 {
 name: "Ice Brut",
-image: "image/drink.png",
+image: "image/drink6.png",
 tagline: "Crisp elegant sparkling wine.",
 details: "Dry sparkling wine with citrus and green apple notes.",
 abv: "11–12%",
@@ -402,7 +386,7 @@ badge: "PREMIUM"
 },
 {
 name: "Sparkling Apple",
-image: "image/drink.png",
+image: "image/drink5.png",
 tagline: "Alcohol-free crisp apple bubbly.",
 details: "Refreshing non-alcoholic sparkling apple drink.",
 abv: "0%",
@@ -418,7 +402,7 @@ badge: ""
 },
 {
 name: "Sparkling Red Grape",
-image: "image/drink.png",
+image: "image/drink2.png",
 tagline: "Rich alcohol-free red grape bubbles.",
 details: "Fruity grape sparkling juice with wine-like feel.",
 abv: "0%",
@@ -434,7 +418,7 @@ badge: ""
 },
 {
 name: "Grape & Apple Blend",
-image: "image/drink.png",
+image: "image/drink1.png",
 tagline: "Balanced sparkling fruit blend.",
 details: "Mix of apple and grape with refreshing bubbles.",
 abv: "0%",
