@@ -2302,19 +2302,36 @@ html{
 
 .shop .cta-grid{
   grid-template-columns:1fr;
-  text-align:left;
   gap:40px;
 }
 
+.shop .cta-text-side{
+   text-align:left;
+}
+
 .shop .cta-visual{
+  order: -1;
+
+  display: flex;
   justify-content: center;
-  text-align: center;
-  justify-items: center;
+  align-items: center;
+
+  width: 100%;
   margin: 0 auto;
+
+  height: auto;
+  overflow: visible;
 }
 
 .shop .cta-visual img{
-  height: 380px;
+  width: 100%;
+  max-width: 380px;
+
+  height: auto;
+  object-fit: contain;
+
+  display: block;
+  margin: 0 auto;
 }
 
 .shop .cta-description{
