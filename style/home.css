@@ -439,8 +439,8 @@ html{
   justify-content: center;
   text-align: center;
   background:
-    linear-gradient(rgba(0,0,0,0.60), rgba(0,0,0,0.30)),
-    url("/image/hero.jpg") center/cover no-repeat;
+    linear-gradient(rgba(0,0,0,0.70), rgba(0,0,0,0.60)),
+    url("/image/heroo.jpg") center/cover no-repeat;
   position: relative;
 }
 
@@ -667,7 +667,7 @@ html{
 
 .wine{
   background:var(--bg-footer);
-  padding:140px 20px;
+  padding:140px 30px;
   position:relative;
   overflow:hidden;
 }
@@ -708,7 +708,7 @@ html{
   max-width:1200px;
   margin:auto;
   display:grid;
-  grid-template-columns:1.1fr 1fr;
+  grid-template-columns:1fr 1.7fr;
   gap:70px;
   align-items:center;
 }
@@ -772,41 +772,38 @@ html{
 
 /* ================= WINE CARDS (LUXURY VERSION) ================= */
 
-.wine .hidden-wines{
-  max-height:0;
-  overflow:hidden;
-
-  display:flex;
-  gap:20px;
-  margin-top:0;
-
-  justify-content:space-evenly;
-  cursor:pointer;
-
-  opacity:0;
-  transform:translateY(-10px);
-
+.wine .hidden-wines {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-height: 0;
+  overflow: hidden;
+  margin-top: 0;
+  padding: 0;
+  opacity: 0;
+  transform: translateY(-10px);
   transition:
-    max-height .7s ease,
-    opacity .45s ease,
-    transform .45s ease,
-    margin-top .45s ease,
-    padding .45s ease;
+    max-height 0.7s ease,
+    opacity 0.45s ease,
+    transform 0.45s ease,
+    margin-top 0.45s ease,
+    padding 0.45s ease;
 }
 
 /* OPEN STATE */
-.wine .hidden-wines.open{
-  max-height:2000px; /* large enough for desktop + mobile */
-  padding:10px;
-  margin-top:25px;
-
-  opacity:1;
-  transform:translateY(0);
+.wine .hidden-wines.open {
+  max-height: 2000px;
+  margin-top: 25px;
+  padding: 10px;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .wine .wine-card{
   width:165px;
   height:305px;
+  flex: 0 0 auto;
   padding:22px 18px;
   border-radius:var(--radius-md);
   text-align:center;
@@ -839,12 +836,21 @@ html{
   box-shadow:0 25px 60px rgba(0,0,0,.6);
 }
 
-.wine-card img{
-  height:180px;
-  object-fit:contain;
+.wine-card .image-wrap{
   width:100%;
-  max-width:150px;
+  height:190px;
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
 }
+
+.wine-card img{
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display:block;
+}
+
 
 .wine-card h4{
   font-size: 19px;
@@ -999,10 +1005,12 @@ html{
   filter:blur(40px);
 }
 
+
 .lightbox .wine-image-box{
   display:flex;
-  align-items:center;
+  align-items:flex-end;
   justify-content:center;
+  height:100%;
 }
 
 .lightbox .wine-image-box img{
@@ -1010,13 +1018,16 @@ html{
   max-width:420px;
   object-fit:contain;
   filter:drop-shadow(0 35px 50px rgba(0,0,0,.5));
+  max-height:650px;
+  object-fit:contain;
+  object-position:center bottom;
+  display:block;
 }
-
 
 /* ================= WHY DECLAN ================= */
 
 .craft {
-  padding: 120px 20px;
+  padding: 120px 50px;
   background: var(--bg-section);
   position: relative;
   overflow: hidden;
@@ -1088,7 +1099,7 @@ html{
 
 .testimonials {
   background: var(--bg-warm);
-  padding: 100px 20px;
+  padding: 100px 50px;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -1211,7 +1222,7 @@ html{
 /* ================= STOCKIST ================= */
 
 .stockist{
-  padding:100px 20px;
+  padding:100px 50px;
   position:relative;
   overflow:hidden;
   background: 
@@ -1356,7 +1367,7 @@ html{
 /* ================= FAQ SECTION ================= */
 
 .faq{
-  padding:100px 20px;
+  padding:100px 40px;
   background:var(--bg-warm);
 }
 
@@ -1491,7 +1502,7 @@ html{
 
 .shop{
   position:relative;
-  padding:100px 20px;
+  padding:100px 50px;
   background: #120606; /* deep wine-black base */
   overflow:hidden;
 }
@@ -1657,7 +1668,7 @@ html{
 
 .footer {
   background: var(--bg-footer);
-  padding: 100px 20px 50px;
+  padding: 100px 50px 50px;
   position: relative;
   overflow: hidden;
   border-top: 1px solid rgba(200,169,106,0.2);
@@ -1881,23 +1892,7 @@ html{
 
 /* ================= RESPONSIVE ================= */
 
-@media (max-width:980px){
 
-.wine .wine-layout{
-    grid-template-columns:1fr;
-    text-align:center;
-    gap:60px;
-  }
-
-.wine .hero-bottle{
-    width:260px;
-  }
-
- .wine .hidden-wines{
-    justify-content:center;
-    flex-wrap:wrap;
-  }
-}
 
 
 /* =========================================================
@@ -1953,6 +1948,12 @@ html{
     font-size: 40px;
   }
 
+.lifestyle .lifestyle-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
   .lifestyle .lifestyle-intro h2 {
     font-size: 40px;
   }
@@ -1977,26 +1978,36 @@ html{
 @media (max-width: 1000px) {
   .wine .wine-layout {
     grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .wine .hidden-wines {
-    flex-wrap: wrap;
-    justify-content: center;
   }
 
   .shop .cta-grid {
     grid-template-columns: 1fr;
-    text-align: center;
+    text-align: left;
+
   }
 
   .shop .cta-visual {
-    margin-top: 20px;
+    display: none;
   }
 
   .stockist .stockist-card {
     padding: 70px 40px;
   }
+  
+}
+
+@media (max-width:980px){
+
+.wine .wine-layout{
+    grid-template-columns:1fr;
+    gap:60px;
+}
+
+.wine .hero-bottle{
+  width:260px;
+}
+
+
 }
 
 
@@ -2120,10 +2131,6 @@ html{
 
 .wine .category{
   padding: 0;
-}
-
-.wine .category-head div{
-  text-align: left;
 }
 
 .wine .category h3{
