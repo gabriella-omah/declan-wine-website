@@ -2310,28 +2310,32 @@ html{
 }
 
 .shop .cta-visual{
-  order: -1;
+  order:-1;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display:flex;
+  justify-content:center;
+  align-items:center;
 
-  width: 100%;
-  margin: 0 auto;
+  width:100%;
+  max-width:100%;
 
-  height: auto;
-  overflow: visible;
+  margin:0 auto;
+  padding:0;
+
+  height:auto;
 }
 
 .shop .cta-visual img{
-  width: 100%;
-  max-width: 300px;
+  display:block;
 
-  height: auto;
-  object-fit: contain;
+  width:100%;
+  max-width:320px;
 
-  display: block;
-  margin: 0 auto;
+  height:auto;
+  object-fit:contain;
+  object-position:center;
+
+  margin:0 auto;
 }
 
 .shop .cta-description{
