@@ -2306,6 +2306,17 @@ html{
   gap:40px;
 }
 
+.shop .cta-visual{
+  justify-content: center;
+  text-align: center;
+  justify-items: center;
+  margin: 0 auto;
+}
+
+.shop .cta-visual img{
+  height: 380px;
+}
+
 .shop .cta-description{
  min-width: 400px;
 }
