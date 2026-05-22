@@ -2325,7 +2325,7 @@ html{
 
 .shop .cta-visual img{
   width: 100%;
-  max-width: 380px;
+  max-width: 300px;
 
   height: auto;
   object-fit: contain;
