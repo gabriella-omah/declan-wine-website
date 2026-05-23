@@ -839,7 +839,7 @@ html{
 
 .wine-card .image-wrap{
   width:100%;
-  height:190px;
+  height:200px;
   display:flex;
   align-items:flex-end;
   justify-content:center;
@@ -862,7 +862,6 @@ html{
 .wine-card small{
   color:var(--text-secondary);
   font-size:13px;
-  margin-bottom: 5px;
 }
 
 /* ================= LIGHTBOX ================= */
