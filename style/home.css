@@ -1425,7 +1425,7 @@ html{
   text-align:left;
   padding:20px 60px 20px 20px  ; /* extra right space */
   font-size:15px;
-  padding-right: 20PX !important;
+  padding-right: 10PX !important;
   background:none;
   border:none;
   cursor:pointer;
