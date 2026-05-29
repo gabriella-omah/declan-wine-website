@@ -3151,6 +3151,11 @@ body.fade-out {
 ========================================================= */
 
 @media (max-width: 600px) {
+  .btn-primary,
+  .btn-secondary{
+    font-size: 14px;
+    padding: 10px 26px;
+  }
   .header{
     height:72px;
   }
@@ -3205,7 +3210,7 @@ body.fade-out {
   }
 
   .hero-meta span{
-    font-size:10px;
+    font-size:12px;
     padding:8px 10px;
   }
 
@@ -3446,14 +3451,6 @@ body.fade-out {
   .hero{
     min-height:68vh;
     padding:90px 16px 40px;
-  }
-
-  .hero-title{
-    font-size:27px;
-  }
-
-  .hero-subtitle{
-    font-size:13px;
   }
 
   .hero .btn-primary{
