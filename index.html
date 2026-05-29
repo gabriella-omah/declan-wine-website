@@ -29,6 +29,7 @@
 <meta property="og:image" content="https://www.declanwines.com/image/hero.jpg">
 <meta property="og:url" content="https://www.declanwines.com/">
 <meta property="og:site_name" content="Declan Wines">
+<meta name="format-detection" content="telephone=no">
 
 <!-- TWITTER CARD -->
 <meta name="twitter:card" content="summary_large_image">
@@ -78,9 +79,11 @@
 
 <div class="overlay" id="overlay"></div>
 
+
 <!-- ================= HEADER / NAV ================= -->
 
 <header class="header" id="header">
+
   <div class="nav-container">
 
     <!-- LEFT NAV -->
@@ -93,9 +96,9 @@
     <!-- CENTER LOGO -->
     <div class="logo">
       <a href="#hero" aria-label="Declan Wines Home">
-        <img 
-          src="image/logo.png" 
-          alt="Declan Wines - Premium Wine Brand in Nigeria offering luxury wine collections"
+        <img
+          src="image/logo.png"
+          alt="Declan Wines - Premium Wine Brand in Nigeria"
         >
       </a>
       <span class="tagline">Declan Wines</span>
@@ -105,29 +108,49 @@
     <nav class="nav-right" aria-label="Secondary Navigation">
       <a class="link" href="#stockist">Stockists</a>
       <a class="link" href="#craft">Craft</a>
-      <a class="shop-btn" href="#shop" aria-label="Explore and Shop Declan Wines Collection">
+
+      <a class="shop-btn"
+         href="#shop"
+         aria-label="Explore and Shop Declan Wines Collection">
         Shop Collection
       </a>
     </nav>
 
     <!-- HAMBURGER MENU -->
-    <button class="hamburger" type="button" onclick="openMenu()" aria-label="Open Navigation Menu">
+    <button class="hamburger"
+            type="button"
+            onclick="openMenu()"
+            aria-label="Open Navigation Menu"
+            aria-controls="mobileMenu"
+            aria-expanded="false">
+
       <span></span>
       <span></span>
       <span></span>
+
     </button>
 
   </div>
+
 </header>
 
 
 <!-- ================= MOBILE-MENU ================= -->
 
-<aside class="mobile-menu" id="mobileMenu" aria-label="Mobile Navigation">
+<aside class="mobile-menu"
+       id="mobileMenu"
+       aria-label="Mobile Navigation"
+       aria-hidden="true">
 
   <div class="menu-top">
     <div class="menu-label">Menu</div>
-    <button class="close" onclick="closeMenu()" aria-label="Close navigation">✕</button>
+
+    <button class="close"
+            onclick="closeMenu()"
+            aria-label="Close navigation"
+            type="button">
+      ✕
+    </button>
   </div>
 
   <nav aria-label="Primary">
@@ -148,25 +171,35 @@
 
 <!-- ================= HERO ================= -->
 
-<section class="hero" id="hero" aria-labelledby="hero-title">
+<section class="hero" id="hero">
+
+  <div class="hero-overlay"></div>
 
   <div class="hero-content">
 
     <p class="eyebrow">
-      DECLAN WINES • CURATED SELECTION
+      IMPORTED WINE COLLECTION • SPAIN CURATED
     </p>
 
-    <h1 class="hero-title" id="hero-title">
-      Elegant wines for refined moments
+    <h1 class="hero-title">
+      House of Declan
     </h1>
 
     <p class="hero-subtitle">
-      Premium wines for celebrations, gifting, and everyday luxury across Nigeria.
+      A curated wine house offering refined selections for celebrations, gifting, and everyday moments across Nigeria.
     </p>
 
-    <a href="#wine" class="btn-primary" aria-label="Explore Declan Wine collection">
-      Explore Wines
-    </a>
+    <div class="hero-actions">
+      <a href="#wine" class="btn-primary">
+        Explore Collection
+      </a>
+    </div>
+
+    <div class="hero-meta">
+      <span>✦ Imported Selection</span>
+      <span>✦ Nationwide Delivery</span>
+      <span>✦ Curated Premium Wines</span>
+    </div>
 
   </div>
 
@@ -175,31 +208,32 @@
 
 <!-- ================= ABOUT ================= -->
 
- <section class="about" id="about" aria-labelledby="about-title">
+<!-- ================= ABOUT ================= -->
+<section class="about" id="about" aria-labelledby="about-title">
 
   <div class="about-left">
-    <p class="eyebrow">OUR STORY</p>
+    <p class="eyebrow">THE BRAND</p>
 
     <h2 id="about-title">
-      Wine shaped by<br>
-      <span>time and intention.</span>
+      Crafted for<br>
+      <span>modern Wine Culture</span>
     </h2>
   </div>
 
   <div class="about-right">
+
     <p>
-      Declan Wine is a smooth, fruit-forward wine collection created for celebration,
-      connection and relaxed luxury.
+      Declan Wines is a Spanish-imported wine selection curated for relaxed celebrations and everyday enjoyment in Nigeria.
     </p>
 
     <p>
-      Curated for enjoyment, gifting, and memorable moments.
+      Built around smooth, easy-drinking profiles, it brings a refined wine experience into Lagos homes, gatherings, and social spaces.
     </p>
 
-    <div class="about-tags" aria-label="Wine highlights">
-      <span>Easy-drinking profile</span>
-      <span>Sweet & smooth taste</span>
-      <span>Celebration ready</span>
+    <div class="about-tags" aria-label="Brand highlights">
+      <span>Imported Wines</span>
+      <span>Lagos Lifestyle</span>
+      <span>Easy Enjoyment</span>
     </div>
 
   </div>
@@ -207,52 +241,65 @@
 </section>
 
 
+<!-- ================= LIFESTYLE ================= -->
+
 <section class="lifestyle" id="lifestyle">
 
   <div class="lifestyle-intro">
-    <span class="eyebrow">THE DECLAN EXPERIENCE</span>
 
-    <h2>The rhythm of enjoyment</h2>
+    <div class="eyebrow">THE DECLAN EXPERIENCE</div>
+
+    <h2>
+      Moments worth sharing together
+    </h2>
 
     <p>
-      From intimate dinners to celebrations and thoughtful gifts, Declan Wines fits naturally into social settings and personal time.
+      From sunset dinners on the Island to celebrations across Lagos and Nigeria, 
+      Declan Wines brings ease and refinement to moments worth remembering.
     </p>
+
   </div>
 
   <div class="lifestyle-content">
 
+    <!-- VIDEO -->
     <div class="lifestyle-media">
       <video autoplay muted loop playsinline>
         <source src="image/video.mp4" type="video/mp4">
       </video>
+
+      <div class="video-overlay">
+        <span>Feel the moment</span>
+      </div>
     </div>
 
+    <!-- TEXT + CARDS -->
     <div class="lifestyle-text">
 
       <p class="lifestyle-lead">
-        Created for gatherings, gifting, and effortless enjoyment.
+        Thoughtfully selected wines that turn everyday gatherings into memorable experiences.
       </p>
 
       <div class="lifestyle-cards">
 
         <div class="card">
           <h4>Celebrations</h4>
-          <p>Wines suited for birthdays, milestones, and gatherings that bring people together.</p>
+          <p>Birthdays, weddings, milestones made for special toasts.</p>
         </div>
 
         <div class="card">
           <h4>Dining</h4>
-          <p>A natural pairing for meals, conversation, and slow evenings at the table.</p>
+          <p>Perfect for Lagos dinners, grilled meals, and long conversations.</p>
         </div>
 
         <div class="card">
           <h4>Gifting</h4>
-          <p>A considered choice for moments that call for something thoughtful.</p>
+          <p>Elegant bottles that leave a lasting impression.</p>
         </div>
 
         <div class="card">
           <h4>Everyday Ease</h4>
-          <p>For quiet nights, simple pauses, and unplanned enjoyment.</p>
+          <p>Relaxed evenings, sunsets, and spontaneous moments.</p>
         </div>
 
       </div>
@@ -266,148 +313,221 @@
 
 <!-- ================= WINE ================= -->
 
+<!-- ================= WINE ================= -->
+
 <section id="wine" class="wine">
 
   <!-- INTRO -->
   <div class="wine-intro">
-      <div class="eyebrow">OUR COLLECTION</div>
 
-      <h2>Selected wines for modern taste</h2>
+    <div class="eyebrow">
+      OUR COLLECTION
+    </div>
 
-      <p>
-        A refined range of sweet, sparkling, and non-alcoholic blends designed for personal enjoyment, gifting, and shared occasions.
-      </p>
+    <h2>
+      Wines for Lagos moments
+    </h2>
+
+    <p>
+      A curated selection of imported Spanish wines and sparkling blends crafted for celebrations, gifting, and relaxed enjoyment across Lagos and Nigeria.
+    </p>
+
   </div>
 
   <div class="wine-layout">
 
-    <!-- HERO -->
-    <div class="wine-left">
-        <div class="wine-hero-glow"></div>
-        <img src="image/hero.jpg" class="hero-bottle"
-             alt="Declan wine collection">
+     <div class="wine-left">
+
+      <div class="wine-hero-glow"></div>
+      <img
+        src="image/hero.jpg"
+        class="hero-bottle"
+        alt="Declan Wines"
+      >
+
     </div>
 
     <div class="wine-right">
 
-      <!-- SWEET WINES -->
+      <!-- ================= SWEET WINES ================= -->
       <div class="category">
-          <div class="category-head">
-              <div>
-                <h3>Sweet Wines</h3>
-                <p>Soft, fruit-forward blends with a smooth finish, ideal for relaxed evenings and easy enjoyment.</p>
-              </div>
-              <button class="view-btn btn-primary" onclick="toggleCategory(0)">
-                Explore collection →
-              </button>
+
+        <div class="category-top">
+
+          <div class="category-info">
+
+            <h3>Sweet Wines</h3>
+
+            <p>
+              Smooth, fruit-forward wines for easy evenings and soft celebrations.
+            </p>
+            
+          </div>
+      
+          <div class="featured-wine">
+
+            <div class="image-wrap">
+              <img src="image/drink8.png" alt="Sweet red wine bottle Declan Wines Nigeria">
+            </div>
+
           </div>
 
-          <div class="hidden-wines">
-              <div class="wine-card" onclick="openWine(1)">
-                <div class="image-wrap">
-                  <img src="image/drink8.png" alt="Sweet Red Wine">
-                </div>
-                  <h4>Sweet Red</h4>
-                  <small>Berry • Cherry • Smooth finish</small>
-              </div>
+          <button class="view-btn btn-primary" onclick="toggleCategory(0)">
+              Explore Collection →
+            </button>
 
-              <div class="wine-card" onclick="openWine(2)">
-                <div class="image-wrap">
-                  <img src="image/drink4.png" alt="Sweet White Wine">
-                  </div>
-                  <h4>Sweet White</h4>
-                  <small>Peach • Citrus • Light profile</small>
-              </div>
+        </div>
 
-              <div class="wine-card" onclick="openWine(3)">
-                <div class="image-wrap">
-                  <img src="image/drink3.png" alt="Moscato Wine">
-                </div>
-                  <h4>Moscato</h4>
-                  <small>Floral • Soft • Light sparkle</small>
-              </div>
+        <div class="hidden-wines">
 
-              <div class="wine-card" onclick="openWine(4)">
-                <div class="image-wrap">
-                  <img src="image/drink7.png" alt="Cabernet Sauvignon">
-                </div>
-                  <h4>Cabernet Sauvignon</h4>
-                  <small>Bold • Dark fruit • Rich finish</small>
-              </div>
+          <div class="wine-card" onclick="openWine(1)">
+            <div class="image-wrap">
+              <img src="image/drink8.png" alt="Sweet Red wine Nigeria">
+            </div>
+            <h4>Sweet Red</h4>
+            <small>Berry • Smooth • Soft finish</small>
           </div>
+
+          <div class="wine-card" onclick="openWine(2)">
+            <div class="image-wrap">
+              <img src="image/drink4.png" alt="Sweet White wine Nigeria">
+            </div>
+            <h4>Sweet White</h4>
+            <small>Citrus • Peach • Light finish</small>
+          </div>
+
+          <div class="wine-card" onclick="openWine(3)">
+            <div class="image-wrap">
+              <img src="image/drink3.png" alt="Moscato wine Declan collection">
+            </div>
+            <h4>Moscato</h4>
+            <small>Floral • Light sparkle</small>
+          </div>
+
+          <div class="wine-card" onclick="openWine(4)">
+            <div class="image-wrap">
+              <img src="image/drink7.png" alt="Cabernet Sauvignon wine Nigeria">
+            </div>
+            <h4>Cabernet</h4>
+            <small>Dark fruit • Structured</small>
+          </div>
+
+        </div>
+
       </div>
 
-      <!-- SPARKLING -->
+      <!-- ================= SPARKLING WINES ================= -->
       <div class="category">
-          <div class="category-head">
-              <div>
-                <h3>Sparkling Wines</h3>
-                <p>Elegant sparkling blends created for celebrations, gatherings, and special occasions.</p>
-              </div>
-              <button class="view-btn btn-primary" onclick="toggleCategory(1)">
-                Explore collection →
-              </button>
+
+        <div class="category-top">
+
+          <div class="category-info">
+
+            <h3>Sparkling Wines</h3>
+
+            <p>
+              Crisp sparkling blends made for celebrations and shared moments.
+            </p>
+            
           </div>
 
-          <div class="hidden-wines">
-              <div class="wine-card" onclick="openWine(5)">
-                <div class="image-wrap">
-                  <img src="image/drink6.png" alt="Ice Rosé Sparkling">
-                </div>
-                <h4>Ice Rosé</h4>
-                <small>Fruity • Floral • Crisp sparkle</small>
-              </div>
+          <div class="featured-wine">
 
-              <div class="wine-card" onclick="openWine(6)">
-                <div class="image-wrap">
-                  <img src="image/drink6.png" alt="Brut Sparkling Wine">
-               </div>
-                <h4>Ice Brut</h4>
-                <small>Dry • Clean • Refined finish</small>
-              </div>
+            <div class="image-wrap">
+              <img src="image/drink6.png" alt="Sparkling wine bottle Declan Wines Nigeria">
+            </div>
+
           </div>
+
+          <button class="view-btn btn-primary" onclick="toggleCategory(1)">
+              Explore Collection →
+            </button>
+
+        </div>
+
+        <div class="hidden-wines">
+
+          <div class="wine-card" onclick="openWine(5)">
+            <div class="image-wrap">
+              <img src="image/drink6.png" alt="Ice Rosé sparkling wine">
+            </div>
+            <h4>Ice Rosé</h4>
+            <small>Fruity • Floral • Elegant</small>
+          </div>
+
+          <div class="wine-card" onclick="openWine(6)">
+            <div class="image-wrap">
+              <img src="image/drink6.png" alt="Ice Brut sparkling wine">
+            </div>
+            <h4>Ice Brut</h4>
+            <small>Dry • Crisp • Clean finish</small>
+          </div>
+
+        </div>
+
       </div>
 
-      <!-- NON ALCOHOLIC -->
+      <!-- ================= NON-ALCOHOLIC ================= -->
       <div class="category">
-          <div class="category-head">
-              <div>
-                <h3>Non-Alcoholic Sparkling</h3>
-                <p>All the celebration feel, without alcohol. Light, refreshing, and enjoyable for all occasions.</p>
-              </div>
-              <button class="view-btn btn-primary" onclick="toggleCategory(2)">
-                Explore collection →
-              </button>
+
+        <div class="category-top">
+
+          <div class="category-info">
+
+            <h3>Non-Alcoholic Sparkling</h3>
+
+            <p>
+              Light sparkling options for every celebration and lifestyle.
+            </p>
+
           </div>
 
-          <div class="hidden-wines">
-              <div class="wine-card" onclick="openWine(7)">
-                <div class="image-wrap">
-                  <img src="image/drink5.png" alt="Sparkling Apple Drink">
-                </div>
-                <h4>Sparkling Apple</h4>
-                <small>Crisp • Light • Refreshing</small>
-              </div>
+          <div class="featured-wine">
 
-              <div class="wine-card" onclick="openWine(8)">
-                <div class="image-wrap">
-                  <img src="image/drink2.png" alt="Sparkling Red Grape Drink">
-                </div>
-                <h4>Sparkling Grape</h4>
-                <small>Fruity • Smooth • Bubbly</small>
-              </div>
+            <div class="image-wrap">
+              <img src="image/drink5.png" alt="Non alcoholic sparkling drink Nigeria Declan Wines">
+            </div>
 
-              <div class="wine-card" onclick="openWine(9)">
-                <div class="image-wrap">
-                  <img src="image/drink1.png" alt="Grape Apple Blend Drink">
-                </div>
-                <h4>Fruit Blend</h4>
-                <small>Sweet • Balanced • Fresh finish</small>
-              </div>
           </div>
+
+          <button class="view-btn btn-primary" onclick="toggleCategory(1)">
+              Explore Collection →
+          </button>
+
+        </div>
+
+        <div class="hidden-wines">
+
+          <div class="wine-card" onclick="openWine(7)">
+            <div class="image-wrap">
+              <img src="image/drink5.png" alt="Sparkling apple drink">
+            </div>
+            <h4>Sparkling Apple</h4>
+            <small>Crisp • Refreshing • Light</small>
+          </div>
+
+          <div class="wine-card" onclick="openWine(8)">
+            <div class="image-wrap">
+              <img src="image/drink2.png" alt="Sparkling grape drink">
+            </div>
+            <h4>Sparkling Grape</h4>
+            <small>Fruity • Balanced • Soft</small>
+          </div>
+
+          <div class="wine-card" onclick="openWine(9)">
+            <div class="image-wrap">
+              <img src="image/drink1.png" alt="Fruit blend sparkling drink">
+            </div>
+            <h4>Fruit Blend</h4>
+            <small>Sweet • Fresh • Easy finish</small>
+          </div>
+
+        </div>
+
       </div>
 
     </div>
+
   </div>
 
 </section>
@@ -433,50 +553,34 @@
 
     <div class="lightbox-grid">
 
-      <!-- LEFT: DETAILS -->
+      <!-- LEFT: IMAGE -->
+      <section class="wine-image-box">
+        <figure>
+          <img id="wineImage" src="" alt="" loading="lazy">
+        </figure>
+      </section>
+
+      <!-- RIGHT: DETAILS -->
       <section class="wine-details">
 
-        <!-- Badge -->
-        <div id="wineBadge"
-             class="wine-badge"
-             aria-hidden="true"></div>
-
-        <!-- Title -->
-        <h2 id="wineTitle">Wine Collection</h2>
-
+        <div id="wineBadge" class="wine-badge"></div>
+        
+        <h2 id="wineTitle"></h2>
+        
         <!-- Description -->
-        <div id="wineDesc">
-          <p>
-            A curated selection of premium wines and sparkling drinks, crafted for celebrations, gifting, and refined taste experiences.
-          </p>
-        </div>
-
-        <!-- Additional Info -->
-        <div id="wineInfo"
-             class="wine-info"
-             aria-label="Product details and tasting notes"></div>
+        <div id="wineDesc" class="wine-desc"></div>
+        
+        <!-- This is where JS puts the spec-grid -->
+        <div id="wineInfo" class="wine-info"></div>
 
         <!-- CTA -->
         <a id="whatsappBtn"
            class="btn-primary"
            target="_blank"
            rel="noopener noreferrer"
-           href="#"
-           aria-label="Order this product via WhatsApp">
-          Get This Wine
+           href="#">
+          Order via WhatsApp
         </a>
-
-      </section>
-
-      <!-- RIGHT: IMAGE -->
-      <section class="wine-image-box">
-
-        <figure>
-          <img id="wineImage"
-               src=""
-               alt="Premium wine bottle from the collection"
-               loading="lazy">
-        </figure>
 
       </section>
 
@@ -484,6 +588,46 @@
 
   </div>
 </div>
+
+<section class="trust" id="trust">
+
+  <div class="trust-inner">
+
+    <div class="trust-item">
+      <i class="fa-solid fa-star trust-icon"></i>
+      <div>
+        <h3>4.9/5 Rating</h3>
+        <p>Loved across Lagos for quality, taste, and premium presentation.</p>
+      </div>
+    </div>
+
+    <div class="trust-item">
+      <i class="fa-solid fa-wine-bottle trust-icon"></i>
+      <div>
+        <h3>Curated Selection</h3>
+        <p>Handpicked Spanish wines chosen for smoothness and balance.</p>
+      </div>
+    </div>
+
+    <div class="trust-item">
+      <i class="fa-solid fa-truck-fast trust-icon"></i>
+      <div>
+        <h3>Fast Delivery</h3>
+        <p>24–48 hours in Lagos • 1–3 days nationwide.</p>
+      </div>
+    </div>
+
+    <div class="trust-item">
+      <i class="fa-solid fa-shield-halved trust-icon"></i>
+      <div>
+        <h3>Trusted Experience</h3>
+        <p>Reliable service, premium packaging, and consistent customer satisfaction.</p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
 
 
 <!-- ================= WHY CHOOSE DECLAN ================= -->
@@ -495,10 +639,11 @@
     <div class="craft-intro">
       <div class="eyebrow">WHY DECLAN</div>
 
-      <h2>Premium wines, delivered to you</h2>
+      <!-- FINAL HEADER (no repetition of "moments") -->
+      <h2>Crafted with intention</h2>
 
       <p>
-        A carefully selected range of quality wines for celebrations, gifting, and everyday luxury delivered fast and reliably across Nigeria.
+        We carefully select smooth, easy-drinking Spanish wines designed for celebration, gifting, and everyday enjoyment across Lagos and Nigeria.
       </p>
     </div>
 
@@ -506,20 +651,20 @@
 
       <div class="craft-item">
         <i class="fa-solid fa-award"></i>
-        <h3>Quality Selection</h3>
-        <p>Only carefully chosen wines with consistent taste and premium finish.</p>
+        <h3>Quality First</h3>
+        <p>Every bottle is chosen for consistency, smoothness, and a refined finish.</p>
       </div>
 
       <div class="craft-item">
-        <i class="fa-solid fa-champagne-glasses"></i>
-        <h3>For Every Occasion</h3>
-        <p>Designed for celebrations, gifting, and relaxed everyday enjoyment.</p>
+        <i class="fa-solid fa-heart"></i>
+        <h3>Made for Real Moments</h3>
+        <p>From Lagos dinners to celebrations wines that naturally fit your lifestyle.</p>
       </div>
 
       <div class="craft-item">
-        <i class="fa-solid fa-truck-fast"></i>
-        <h3>Fast Delivery</h3>
-        <p>Reliable delivery across Nigeria with careful handling and speed.</p>
+        <i class="fa-solid fa-wine-glass"></i>
+        <h3>Distinct Character</h3>
+        <p>Each wine is selected for its unique aroma, balance, and memorable finish.</p>
       </div>
 
     </div>
@@ -537,43 +682,73 @@
 
     <header class="testimonial-intro">
 
-      <div class="eyebrow">Customer Reviews</div>
+      <div class="eyebrow">
+        THE DECLAN CIRCLE
+      </div>
 
       <h2 id="testimonials-title">
-        What customers are saying
+        Real moments, real feedback
       </h2>
+
+      <p>
+        Hear what customers across Lagos and Nigeria are saying about their Declan experience.
+      </p>
 
     </header>
 
     <div class="testimonial-slider" role="region" aria-label="Customer testimonials slider">
 
+      <!-- TESTIMONIAL 1 -->
       <article class="testimonial-slide active">
+
         <p class="testimonial-quote">
-          “Honestly, I didn’t expect this level of quality. The wine was smooth, well packaged, and delivery was fast in Lagos. I’ll order again.”
+          “The packaging was premium, the wine was smooth and not too heavy. Delivery in Lagos was surprisingly fast. I’ll definitely order again.”
         </p>
-        <p class="testimonial-name">Amaka, Lagos</p>
+
+        <div class="testimonial-meta">
+          <p class="testimonial-name">Amaka O.</p>
+          <span>Lagos</span>
+        </div>
+
       </article>
 
+      <!-- TESTIMONIAL 2 -->
       <article class="testimonial-slide">
+
         <p class="testimonial-quote">
-          “We used Declan wines for a birthday dinner and everyone kept asking where we got it from. It really upgraded the whole event.”
+          “We used Declan wines for a birthday dinner and it completely elevated the evening. Everyone kept asking where we got the sparkling from.”
         </p>
-        <p class="testimonial-name">Tunde, Lagos</p>
+
+        <div class="testimonial-meta">
+          <p class="testimonial-name">Tunde Adebayo</p>
+          <span>Abuja</span>
+        </div>
+
       </article>
 
+      <!-- TESTIMONIAL 3 -->
       <article class="testimonial-slide">
+
         <p class="testimonial-quote">
-          “Packaging is premium and delivery was smooth. It’s now my go-to when I need a gift for friends or family.”
+          “Bought it as a gift but ended up ordering more for myself. The presentation is thoughtful and the taste is beautifully balanced. Highly recommended.”
         </p>
-        <p class="testimonial-name">Chidinma, Anambra</p>
+
+        <div class="testimonial-meta">
+          <p class="testimonial-name">Chidinma Eze</p>
+          <span>Enugu</span>
+        </div>
+
       </article>
 
     </div>
 
-    <div class="testimonial-dots" aria-label="Testimonial navigation dots">
+    <!-- DOTS -->
+    <div class="testimonial-dots">
+
       <button class="dot active" aria-label="Testimonial 1"></button>
       <button class="dot" aria-label="Testimonial 2"></button>
       <button class="dot" aria-label="Testimonial 3"></button>
+
     </div>
 
   </div>
@@ -591,26 +766,23 @@
 
       <div class="eyebrow">PARTNERSHIPS</div>
 
-      <h2 class="section-title">
-        Become a Declan Stockist
-      </h2>
+      <h2 class="section-title">Become a Declan Stockist</h2>
 
       <p class="stockist-text">
-        Join our network of trusted stockists and access exclusive wine selections for your business.Built for premium retailers, hospitality spaces, and distributors.
+        Join a growing network of premium partners across Nigeria. 
+        Offer high-demand Spanish wines with excellent margins and strong customer appeal.
       </p>
 
       <div class="stockist-tags">
-
         <span>Retail Stores</span>
-        <span>Bars & Lounges</span>
-        <span>Hotels</span>
-        <span>Event Vendors</span>
-
+        <span>Hotels & Resorts</span>
+        <span>Lounges & Bars</span>
+        <span>Event Planners</span>
       </div>
 
-      <a href="https://wa.me/2348065819721?text=Hi%2C%20I%27m%20interested%20in%20becoming%20a%20Declan%20stockist"
-         class="stockist-link primary">
-        Apply via WhatsApp →
+      <a href="https://wa.me/2348065819721?text=Hi%2C%20I%27m%20interested%20in%20becoming%20a%20Declan%20Stockist.%20Please%20send%20details."
+         class="btn-primary">
+        Partner with declan
       </a>
 
     </div>
@@ -627,88 +799,161 @@
   <div class="faq-container">
 
     <div class="faq-header">
-      <div class="eyebrow">Support</div>
 
-      <h2>Common Questions</h2>
+      <div class="eyebrow">
+        SUPPORT & DELIVERY
+      </div>
 
-      <p>Orders, delivery, stockists and everything you need to know.</p>
+      <h2>
+        Frequently Asked Questions
+      </h2>
+
+      <p>
+        Everything you need to know about ordering, delivery, gifting, and working with us.
+      </p>
+
     </div>
 
     <div class="faq-list">
 
-      <!-- ALWAYS VISIBLE -->
+      <!-- Visible FAQs -->
 
-      <div class="faq-card">
-        <button class="faq-question">How do I order Declan Wines?</button>
+      <div class="faq-card active">
+
+        <button class="faq-question">
+          How do I order Declan Wines?
+        </button>
+
         <div class="faq-answer">
-          <p>You can order directly through the website or via WhatsApp for fast processing.</p>
+          <p>
+            You can order directly on our website or via WhatsApp for faster processing, custom requests, and bulk orders.
+          </p>
         </div>
+
       </div>
 
       <div class="faq-card">
-        <button class="faq-question">Do you deliver across Nigeria? </button>
+
+        <button class="faq-question">
+          Do you deliver across Nigeria?
+        </button>
+
         <div class="faq-answer">
-          <p>Yes, we deliver to major cities including Lagos, Abuja, and Port Harcourt.</p>
+          <p>
+            We deliver across Lagos, Abuja, Port Harcourt, Enugu, Ibadan, and other major Nigerian cities.
+          </p>
         </div>
+
       </div>
 
       <div class="faq-card">
-        <button class="faq-question">How long does delivery take?</button>
+
+        <button class="faq-question">
+          How long does delivery take?
+        </button>
+
         <div class="faq-answer">
-          <p>Delivery usually takes 24–72 hours depending on your location.</p>
+          <p>
+            Lagos orders typically arrive within 24 hours. Nationwide delivery usually takes 1–3 business days depending on your location.
+          </p>
         </div>
+
       </div>
 
-      <!-- COLLAPSED (SHOW MORE SECTION) -->
+      <!-- Hidden / Additional FAQs -->
 
-        <div class="faq-card hidden">
-        <button class="faq-question">Can I order for events or bulk purchases?</button>
+      <div class="faq-card hidden">
+
+        <button class="faq-question">
+          Can I order for events or bulk purchases?
+        </button>
+
         <div class="faq-answer">
-          <p>Yes, we handle bulk and event orders for weddings, parties, and corporate events.</p>
+          <p>
+            Yes. We specialize in bulk and event orders for weddings, parties, corporate events, and special occasions.
+          </p>
         </div>
+
       </div>
 
       <div class="faq-card hidden">
-        <button class="faq-question">Are your wines original and premium quality?</button>
+
+        <button class="faq-question">
+          Are your wines imported and authentic?
+        </button>
+
         <div class="faq-answer">
-          <p>Yes, all wines are carefully selected for quality and taste.</p>
+          <p>
+            Yes. All our wines are carefully sourced and imported from Spain with strict quality control.
+          </p>
         </div>
+
       </div>
 
       <div class="faq-card hidden">
-        <button class="faq-question">Can I become a stockist?</button>
+
+        <button class="faq-question">
+          Can I become a stockist or distributor?
+        </button>
+
         <div class="faq-answer">
-          <p>Yes, we work with retailers, bars, hotels, and distributors across Nigeria.</p>
+          <p>
+            We welcome partnerships with retailers, hotels, lounges, and distributors across Nigeria.
+          </p>
         </div>
+
       </div>
 
       <div class="faq-card hidden">
-        <button class="faq-question">Do you offer wholesale pricing?</button>
+
+        <button class="faq-question">
+          Do you offer wholesale pricing?
+        </button>
+
         <div class="faq-answer">
-          <p>Yes, we offer special pricing for bulk and business orders.</p>
+          <p>
+            Yes. Competitive wholesale pricing is available for qualified partners and high-volume orders.
+          </p>
         </div>
+
       </div>
 
       <div class="faq-card hidden">
-        <button class="faq-question">Is wine good for gifting?</button>
+
+        <button class="faq-question">
+          Are Declan wines good for gifting?
+        </button>
+
         <div class="faq-answer">
-          <p>Absolutely — our wines are perfect for gifts and celebrations.</p>
+          <p>
+            Very much so. Our elegant packaging and quality make them ideal for birthdays, anniversaries, and corporate gifting.
+          </p>
         </div>
+
       </div>
 
       <div class="faq-card hidden">
-        <button class="faq-question">How do I contact you urgently?</button>
+
+        <button class="faq-question">
+          How can I contact you quickly?
+        </button>
+
         <div class="faq-answer">
-          <p>You can reach us directly via WhatsApp for faster response.</p>
+          <p>
+            The fastest way is via WhatsApp. Our team typically responds within minutes during business hours.
+          </p>
         </div>
+
       </div>
 
     </div>
 
     <div class="faq-toggle">
+
       <button class="btn-secondary" id="faqToggleBtn">
         Show More Questions
       </button>
+
     </div>
 
   </div>
@@ -720,39 +965,48 @@
  
 <section class="shop" id="order-wine" aria-labelledby="order-heading">
 
-  <div class="cta-grid">
+  <div class="container">
 
-    <!-- TEXT CONTENT -->
-    <div class="cta-text-side">
+    <div class="cta-grid">
 
-      <p class="eyebrow">Lagos Wine Delivery</p>
+      <!-- TEXT CONTENT -->
+      <div class="cta-text-side">
 
-      <h2 id="order-heading">
-        Order Declan Wine for your celebration
-      </h2>
+        <div class="eyebrow">
+          DECLAN WINE DELIVERY
+        </div>
 
-      <p class="cta-description">
-        Premium wines for birthdays, weddings, private dinners, corporate events,
-        and luxury gifting. Delivered across Lagos with care and speed.
-      </p>
+        <h2 id="order-heading">
+          Ready for your Declan moment?
+        </h2>
 
-      <a 
-        href="https://wa.me/2348065819721?text=Hi%2C%20I%27d%20like%20to%20order%20Declan%20Wine"
-        class="btn-primary"
-        target="_blank"
-        rel="noopener"
-        aria-label="Order Declan Wine on WhatsApp"
-      >
-        Order on WhatsApp
-      </a>
+        <p class="cta-description">
+          Whether it’s a celebration, thoughtful gifting, or an intimate dinner, 
+          enjoy carefully selected Spanish wines delivered across Lagos and Nigeria 
+          beautifully packaged and ready to serve.
+        </p>
 
-    </div>
+        <a
+          href="https://wa.me/2348065819721?text=Hi%2C%20I%27d%20like%20to%20order%20Declan%20Wine"
+          class="btn-primary"
+          target="_blank"
+          rel="noopener"
+          aria-label="Order Declan Wine on WhatsApp"
+        >
+          Order on WhatsApp
+        </a>
 
-    <!-- VISUAL CONTENT -->
-    <div class="cta-visual" aria-hidden="true">
+      </div>
 
-      <img src="image/ctaa.jpeg"
-       alt="Declan Wines premium wine delivery in Lagos">
+      <!-- VISUAL -->
+      <div class="cta-visual">
+
+        <img
+          src="image/ctaa.jpeg"
+          alt="Premium Declan Wines ready for delivery in Lagos"
+        >
+
+      </div>
 
     </div>
 
@@ -769,43 +1023,39 @@
 
     <!-- BRAND -->
     <section class="footer-brand">
-
-      <h3 class="footer-logo">Declan Wine</h3>
+      <h3 class="footer-logo">Declan Wines</h3>
 
       <p class="footer-description">
-        A premium wine brand offering curated selections for celebrations, gifting,
-        and everyday luxury across Nigeria.
+        Premium Spanish wines curated for celebrations, gifting, and refined moments across Nigeria.
       </p>
 
-      <!-- SOCIALS -->
-      <nav class="footer-socials" aria-label="Declan Wine social media">
+      <nav class="footer-socials" aria-label="Social Media">
 
-        <a href="https://www.instagram.com/declanwineng?igsh=MWl5aXdjMm44c2VlMw==" aria-label="Follow Declan Wine on Instagram">
+        <a href="https://www.instagram.com/declanwineng" target="_blank" rel="noopener" aria-label="Instagram">
           <i class="fa-brands fa-instagram"></i>
         </a>
 
-        <a href="#" aria-label="Follow Declan Wine on Facebook">
+        <a href="#" target="_blank" rel="noopener" aria-label="Facebook">
           <i class="fa-brands fa-facebook-f"></i>
         </a>
 
-        <a href="#" aria-label="Follow Declan Wine on X">
+        <a href="#" target="_blank" rel="noopener" aria-label="X / Twitter">
           <i class="fa-brands fa-x-twitter"></i>
         </a>
 
       </nav>
-
     </section>
 
-    <!-- LINKS -->
-    <nav class="footer-links" aria-label="Explore Declan Wine">
+    <!-- EXPLORE -->
+    <nav class="footer-links" aria-label="Quick Links">
 
       <h4 class="eyebrow">Explore</h4>
 
       <ul>
         <li><a href="#about">Our Story</a></li>
-        <li><a href="#lifestyle">Experience</a></li>
+        <li><a href="#lifestyle">The Experience</a></li>
         <li><a href="#wine">Wine Collection</a></li>
-        <li><a href="#stockist">Stockists</a></li>
+        <li><a href="#stockist">Become a Stockist</a></li>
         <li><a href="#order-wine">Shop Wines</a></li>
       </ul>
 
@@ -814,23 +1064,20 @@
     <!-- CONTACT -->
     <section class="footer-contact">
 
-      <h4 class="eyebrow">Contact</h4>
+      <h4 class="eyebrow">Contact Us</h4>
 
-      <address class="footer-address">
-
-        <a href="mailto:declanwine@gmail.com" class="footer-contact-link">
-          declanwine@gmail.com
-        </a>
-
-        <a href="tel:+2348065819721" class="footer-contact-link">
-          +234 806 581 9721
-        </a>
-
-        <p class="footer-location">Lagos, Nigeria</p>
-
+      <address>
+        <a href="mailto:declanwine@gmail.com">declanwine@gmail.com</a>
+        <a href="tel:+2348065819721">+234 806 581 9721</a>
+        <p>Lagos, Nigeria</p>
       </address>
 
-      <a class="footer-cta" href="https://wa.me/2348065819721">
+      <a href="https://wa.me/2348065819721"
+         class="footer-cta"
+         target="_blank"
+         rel="noopener">
+
+        <i class="fa-brands fa-whatsapp"></i>
         Chat on WhatsApp
       </a>
 
@@ -839,25 +1086,17 @@
   </div>
 
   <!-- NEWSLETTER -->
-  <section class="footer-newsletter" aria-labelledby="newsletter-title">
+  <section class="footer-newsletter">
 
-    <h3 id="newsletter-title">Get updates from Declan</h3>
+    <h3>Join the Declan List</h3>
 
-    <p>Be the first to know about new arrivals, offers, and private releases.</p>
+    <p>
+      Get early access to new arrivals, curated selections, and exclusive offers.
+    </p>
 
-    <form class="newsletter-form" aria-label="Newsletter signup form">
+    <form class="newsletter-form" aria-label="Newsletter signup">
 
-      <label for="newsletter-email" class="visually-hidden">
-        Email address
-      </label>
-
-      <input 
-        id="newsletter-email"
-        type="email" 
-        name="email"
-        placeholder="Your email address"
-        required
-      />
+      <input type="email" placeholder="Your email address" required />
 
       <button class="btn-secondary" type="submit">
         Subscribe
@@ -867,14 +1106,14 @@
 
   </section>
 
-  <!-- LEGAL -->
+  <!-- BOTTOM -->
   <div class="footer-bottom">
 
-    <p>© 2026 Declan Wine. All rights reserved.</p>
+    <p>© 2026 Declan Wines. All rights reserved.</p>
 
-    <nav class="footer-mini-links" aria-label="Legal links">
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms</a>
+    <nav class="footer-mini-links">
+      <a href="/privacy">Privacy Policy</a>
+      <a href="/terms">Terms & Conditions</a>
     </nav>
 
   </div>
@@ -889,19 +1128,92 @@
   <a href="https://wa.me/2348065819721"
      class="float-btn whatsapp-btn"
      target="_blank"
-     aria-label="Chat with Declan Wine on WhatsApp">
+     rel="noopener noreferrer"
+     aria-label="Chat on WhatsApp">
 
-     <i class="fa-brands fa-whatsapp"></i>
+     <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
   </a>
 
   <!-- Scroll to top -->
   <button class="float-btn scroll-top-btn"
-          aria-label="Scroll to top">
-      <i class="fa-solid fa-arrow-up"></i>
+          type="button"
+          aria-label="Scroll to top of page">
+      <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
   </button>
 
 </div>
 
+<!-- AGE GATE -->
+
+<div class="age-gate" id="ageGate">
+
+  <div class="age-gate-overlay"></div>
+
+  <div class="age-gate-modal">
+
+    <div class="age-gate-eyebrow">
+      DECLAN WINES
+    </div>
+
+    <h2>
+      Welcome
+    </h2>
+
+    <p>
+      Please confirm you are of legal drinking age in your region to enter.
+    </p>
+
+    <div class="age-gate-actions">
+
+      <button class="btn-primary" id="enterSite">
+        I am of legal age
+      </button>
+
+      <a href="https://google.com"
+         class="btn-secondary"
+         rel="noopener noreferrer">
+        Exit
+      </a>
+
+    </div>
+
+    <small>
+      Please enjoy responsibly.
+    </small>
+
+  </div>
+
+</div>
+
+
+<!-- COOKIE NOTICE -->
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Cookie preferences">
+
+  <div class="cookie-content">
+
+    <p class="cookie-text">
+      We use cookies to improve your experience, analyze traffic, and enhance site functionality.
+    </p>
+
+    <div class="cookie-actions">
+
+      <button class="cookie-btn cookie-accept" id="acceptCookies">
+        Accept
+      </button>
+
+      <button class="cookie-btn cookie-decline" id="declineCookies">
+        Decline
+      </button>
+
+      <a href="#privacy" class="cookie-link">
+        Learn more
+      </a>
+
+    </div>
+
+  </div>
+
+</div>
 
 <script type="text/javascript" src="index.js"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
