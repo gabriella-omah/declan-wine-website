@@ -287,151 +287,130 @@ if(hamburger){
 /* =========================
    WINE DATA
 ========================= */
+/* =========================
+   WINE DATA
+========================= */
 const wines = [
-{
-name: "Declan Sweet Red",
-image: "image/drink8.png",
-tagline: "Juicy sweet red bursting with berry & cherry flavours.",
-details: "Smooth and vibrant red wine crafted for joyful moments with lush cherry, strawberry and soft spice notes.",
-abv: "11–12%",
-sizes: ["75cl", "37.5cl", "25cl"],
-sweetness: "Sweet",
-origin: "Spain (Tempranillo blend)",
-pairing: "Grilled chicken, pizza, shawarma, desserts",
-serving: "14–16°C (slightly chilled)",
-occasion: "Celebrations, dinners",
-cooking: "Rich sauces, stews",
-price: "₦7,500 – ₦10,999",
-badge: "BESTSELLER"
-},
-{
-name: "Declan Sweet White",
-image: "image/drink4.png",
-tagline: "Silky white wine with peach & tropical fruit notes.",
-details: "Refreshing white wine with peach, pineapple and citrus blossom.",
-abv: "11%",
-sizes: ["75cl", "37.5cl"],
-sweetness: "Sweet",
-origin: "Spain",
-pairing: "Seafood, pasta, salads",
-serving: "8–10°C (chilled)",
-occasion: "Brunch, light meals",
-cooking: "Cream sauces",
-price: "₦8,600 – ₦9,500",
-badge: ""
-},
-{
-name: "Declan Moscato",
-image: "image/drink3.png",
-tagline: "Light, refreshing and beautifully fruity Moscato.",
-details: "Floral, sweet and tropical with soft aromatic finish.",
-abv: "7.5–11%",
-sizes: ["75cl"],
-sweetness: "Sweet",
-origin: "Italy style",
-pairing: "Desserts, fruit, cupcakes",
-serving: "6–8°C (very cold)",
-occasion: "Celebrations",
-cooking: "Not commonly used",
-price: "₦8,000 – ₦9,000",
-badge: ""
-},
-{
-name: "Cabernet Sauvignon",
-image: "image/drink7.png",
-tagline: "Bold red wine with dark berry richness.",
-details: "Full-bodied wine with blackcurrant, plum and oak spice.",
-abv: "12–13%",
-sizes: ["75cl"],
-sweetness: "Dry",
-origin: "France/European style",
-pairing: "Steak, grilled meats",
-serving: "16–18°C",
-occasion: "Premium dinners",
-cooking: "Excellent for reductions",
-price: "₦9,000 – ₦12,000",
-badge: "PREMIUM"
-},
-{
-name: "Rosé Sparkling",
-image: "image/drink6.png",
-tagline: "Fresh celebratory bubbly rosé.",
-details: "Light sparkling wine with fruity aroma and lively bubbles.",
-abv: "11–12%",
-sizes: ["75cl"],
-sweetness: "Semi-sweet",
-origin: "Spain sparkling",
-pairing: "Pastries, finger foods",
-serving: "5–7°C",
-occasion: "Celebrations",
-cooking: "No",
-price: "₦10k – ₦13k",
-badge: ""
-},
-{
-name: "Ice Brut",
-image: "image/drink6.png",
-tagline: "Crisp elegant sparkling wine.",
-details: "Dry sparkling wine with citrus and green apple notes.",
-abv: "11–12%",
-sizes: ["75cl"],
-sweetness: "Dry",
-origin: "Brut style",
-pairing: "Seafood, oysters",
-serving: "5°C",
-occasion: "Formal events",
-cooking: "Gourmet reductions",
-price: "₦10k – ₦13k",
-badge: "PREMIUM"
-},
-{
-name: "Sparkling Apple",
-image: "image/drink5.png",
-tagline: "Alcohol-free crisp apple bubbly.",
-details: "Refreshing non-alcoholic sparkling apple drink.",
-abv: "0%",
-sizes: ["75cl", "25cl"],
-sweetness: "Sweet",
-origin: "Fruit blend",
-pairing: "All occasions",
-serving: "Chilled",
-occasion: "Family events",
-cooking: "No",
-price: "₦7k – ₦10k",
-badge: ""
-},
-{
-name: "Sparkling Red Grape",
-image: "image/drink2.png",
-tagline: "Rich alcohol-free red grape bubbles.",
-details: "Fruity grape sparkling juice with wine-like feel.",
-abv: "0%",
-sizes: ["75cl", "25cl"],
-sweetness: "Sweet",
-origin: "Fruit blend",
-pairing: "Events, parties",
-serving: "Chilled",
-occasion: "Family gatherings",
-cooking: "No",
-price: "₦9k – ₦10k",
-badge: ""
-},
-{
-name: "Grape & Apple Blend",
-image: "image/drink1.png",
-tagline: "Balanced sparkling fruit blend.",
-details: "Mix of apple and grape with refreshing bubbles.",
-abv: "0%",
-sizes: ["75cl"],
-sweetness: "Sweet",
-origin: "Fruit blend",
-pairing: "Brunch, kids parties",
-serving: "Chilled",
-occasion: "Everyday drinks",
-cooking: "No",
-price: "₦7k – ₦10k",
-badge: ""
-}
+  {
+    id: 1,
+    name: "Sweet Red",
+    image: "image/drink8.png",
+    badge: "BESTSELLER",
+    tagline: "Juicy berry richness",
+    details: "Smooth red with cherry and soft spice notes.",
+    abv: "11–12%",
+    sizes: ["75cl"],
+    sweetness: "Sweet",
+    origin: "Spain (Imported)",
+    serving: "14–16°C",
+    pairing: "Chicken, pizza, desserts",
+    occasion: "Celebrations, dinners",
+    cooking: "Rich sauces, stews",
+    price: "₦8,500 – ₦10,999"
+  },
+  {
+    id: 2,
+    name: "Sweet White",
+    image: "image/drink4.png",
+    badge: "",
+    tagline: "Soft tropical freshness",
+    details: "Light white wine with peach and citrus notes.",
+    abv: "11%",
+    sizes: ["75cl"],
+    sweetness: "Sweet",
+    origin: "Spain (Imported)",
+    serving: "8–10°C",
+    pairing: "Seafood, salads, pasta",
+    occasion: "Brunch, light meals",
+    cooking: "Cream sauces",
+    price: "₦8,600 – ₦9,500"
+  },
+  {
+    id: 3,
+    name: "Moscato",
+    image: "image/drink3.png",
+    badge: "",
+    tagline: "Light floral sparkle",
+    details: "Sweet, floral Moscato with soft tropical finish.",
+    abv: "7.5–9%",
+    sizes: ["75cl"],
+    sweetness: "Sweet",
+    origin: "Italy (Style)",
+    serving: "6–8°C",
+    pairing: "Desserts, fruit, cakes",
+    occasion: "Celebrations",
+    cooking: "Not commonly used",
+    price: "₦8,000 – ₦9,000"
+  },
+  {
+    id: 4,
+    name: "Cabernet",
+    image: "image/drink7.png",
+    badge: "PREMIUM",
+    tagline: "Bold dark fruit depth",
+    details: "Full-bodied red with blackcurrant and oak spice.",
+    abv: "12–13%",
+    sizes: ["75cl"],
+    sweetness: "Medium Sweet",
+    origin: "Spain (Imported)",
+    serving: "16–18°C",
+    pairing: "Steak, grilled meats, suya",
+    occasion: "Premium dinners",
+    cooking: "Excellent for reductions",
+    price: "₦9,000 – ₦12,000"
+  },
+  // Add the rest similarly (Sparkling & Non-Alcoholic)
+  {
+    id: 5,
+    name: "Ice Rosé",
+    image: "image/drink6.png",
+    badge: "",
+    tagline: "Fresh pink sparkle",
+    details: "Light rosé with berry and floral notes.",
+    abv: "11%",
+    sizes: ["75cl"],
+    sweetness: "Semi-Sweet",
+    origin: "Spain (Imported)",
+    serving: "5–7°C",
+    pairing: "Pastries, snacks, salads",
+    occasion: "Celebrations",
+    cooking: "",
+    price: "₦9,800 – ₦11,500"
+  },
+  {
+    id: 6,
+    name: "Ice Brut",
+    image: "image/drink6.png",
+    badge: "PREMIUM",
+    tagline: "Crisp elegant finish",
+    details: "Dry sparkling with citrus and apple notes.",
+    abv: "11%",
+    sizes: ["75cl"],
+    sweetness: "Dry",
+    origin: "Spain (Imported)",
+    serving: "5–6°C",
+    pairing: "Seafood, oysters, sushi",
+    occasion: "Formal events",
+    cooking: "Gourmet reductions",
+    price: "₦9,800 – ₦11,500"
+  },
+  {
+    id: 7,
+    name: "Sparkling Apple",
+    image: "image/drink5.png",
+    badge: "",
+    tagline: "Crisp apple sparkle",
+    details: "Refreshing non-alcoholic apple fizz.",
+    abv: "0%",
+    sizes: ["75cl"],
+    sweetness: "Sweet",
+    origin: "Fruit Blend",
+    serving: "Chilled",
+    pairing: "All occasions",
+    occasion: "Family events",
+    cooking: "",
+    price: "₦6,500 – ₦7,500"
+  }
 ];
 
 
@@ -501,4 +480,96 @@ document.addEventListener("keydown", e=>{
     closeBox();
     closeAllFaqs();
   }
+});
+
+const ageGate = document.getElementById("ageGate");
+const enterSite = document.getElementById("enterSite");
+
+if(localStorage.getItem("declan-age-confirmed")){
+  ageGate.classList.add("hide");
+}
+
+enterSite.addEventListener("click", () => {
+  localStorage.setItem("declan-age-confirmed", "true");
+  ageGate.classList.add("hide");
+});
+
+const cookieBanner = document.getElementById("cookieBanner");
+const acceptBtn = document.getElementById("acceptCookies");
+const declineBtn = document.getElementById("declineCookies");
+
+let cookieShown = false;
+let scrollTriggered = false;
+
+/* =========================
+   SHOW COOKIE BANNER
+========================= */
+function showCookieBanner() {
+
+  if (cookieShown) return;
+  if (localStorage.getItem("declanCookieConsent")) return;
+
+  cookieShown = true;
+
+  setTimeout(() => {
+    cookieBanner.classList.add("show");
+  }, 2000); // small animation delay for smooth UX
+}
+
+/* =========================
+   SCROLL TRIGGER (FIRST SCROLL ONLY)
+========================= */
+window.addEventListener("scroll", () => {
+
+  if (scrollTriggered) return;
+
+  scrollTriggered = true;
+
+  // wait 20 seconds AFTER first scroll
+  setTimeout(() => {
+    showCookieBanner();
+  }, 20000);
+
+});
+
+/* =========================
+   ACCEPT COOKIES
+========================= */
+if (acceptBtn) {
+  acceptBtn.addEventListener("click", () => {
+
+    localStorage.setItem("declanCookieConsent", "accepted");
+
+    cookieBanner.classList.remove("show");
+
+  });
+}
+
+/* =========================
+   DECLINE COOKIES
+========================= */
+if (declineBtn) {
+  declineBtn.addEventListener("click", () => {
+
+    localStorage.setItem("declanCookieConsent", "declined");
+
+    cookieBanner.classList.remove("show");
+
+  });
+}
+
+/* =========================
+   OPTIONAL: SHOW ON LOAD IF NO CONSENT (fallback safety)
+========================= */
+window.addEventListener("load", () => {
+
+  const saved = localStorage.getItem("declanCookieConsent");
+
+  if (!saved) {
+    // fallback: ensures it still appears even if user doesn't scroll
+    setTimeout(() => {
+      showCookieBanner();
+    }, 5000);
+  }
+
 });
