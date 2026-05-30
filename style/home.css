@@ -1721,11 +1721,9 @@ body.fade-out {
   position:relative;
 }
 
-/* ================= HEADER ================= */
-
 .faq .faq-header{
   text-align:center;
-  margin-bottom:40px;
+  margin-bottom:48px;
 }
 
 .faq .faq-header .eyebrow{
@@ -1749,13 +1747,11 @@ body.fade-out {
   margin:0 auto;
 }
 
+/* FAQ List */
 .faq .faq-list{
   display:flex;
   flex-direction:column;
-}
-
-.faq .faq-card:not(:last-child){
-  margin-bottom:10px;
+  gap:14px;
 }
 
 .faq .faq-card{
@@ -1764,10 +1760,7 @@ body.fade-out {
   border-radius:var(--radius-md);
   box-shadow:0 10px 30px rgba(0,0,0,0.05);
   overflow:hidden;
-  transition:
-    border-color .4s ease,
-    transform .4s ease,
-    background .4s ease;
+  transition: all .4s ease;
 }
 
 .faq .faq-card:hover{
@@ -1777,14 +1770,16 @@ body.fade-out {
 
 .faq .faq-card.active{
   transform:translateY(-2px);
+  border-color:var(--accent-gold);
 }
 
+/* Question */
 .faq .faq-question{
   width:100%;
   background:none;
   border:none;
   text-align:left;
-  padding:22px 95px 22px 20px;
+  padding:24px 90px 24px 28px;   /* Increased right padding for 50px space */
   cursor:pointer;
   color:var(--text-dark);
   font-size:16px;
@@ -1796,12 +1791,12 @@ body.fade-out {
 .faq .faq-question::after{
   content:"+";
   position:absolute;
-  right:24px;
+  right:50px;                    /* Exactly 50px from right edge */
   top:50%;
   transform:translateY(-50%);
-  width:24px;
+  width:28px;
   text-align:center;
-  font-size:22px;
+  font-size:26px;
   font-weight:300;
   color:var(--accent-gold);
   transition:.3s ease;
@@ -1811,6 +1806,7 @@ body.fade-out {
   content:"–";
 }
 
+/* Answer */
 .faq .faq-answer{
   max-height:0;
   overflow:hidden;
@@ -1818,19 +1814,17 @@ body.fade-out {
   opacity:0;
   line-height:1.8;
   font-size:15px;
-  padding:0 20px;
-  transition:
-    max-height .7s cubic-bezier(.22,.61,.36,1),
-    opacity .5s ease,
-    padding .5s ease;
+  padding:0 28px;
+  transition: all .7s cubic-bezier(.22,.61,.36,1);
 }
 
 .faq .faq-card.active .faq-answer{
   max-height:400px;
   opacity:1;
-  padding:0 30px 20px;
+  padding:0 30px 28px;
 }
 
+/* Hidden Cards */
 .faq .faq-card.hidden{
   max-height:0;
   opacity:0;
@@ -1841,10 +1835,7 @@ body.fade-out {
   margin:0;
   border:none;
   box-shadow:none;
-  transition:
-    max-height .8s cubic-bezier(.22,.61,.36,1),
-    opacity .5s ease,
-    transform .7s ease;
+  transition: all .8s cubic-bezier(.22,.61,.36,1);
 }
 
 .faq .faq-card.show{
@@ -1856,13 +1847,9 @@ body.fade-out {
   box-shadow:var(--shadow-soft);
 }
 
-.faq .faq-card.show:not(:last-child){
-  margin-bottom:14px;
-}
-
 .faq .faq-toggle{
   text-align:center;
-  margin-top:30px;
+  margin-top:35px;
 }
 
 
