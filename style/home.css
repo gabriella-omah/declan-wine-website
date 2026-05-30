@@ -1784,7 +1784,7 @@ body.fade-out {
   background:none;
   border:none;
   text-align:left;
-  padding: 20px 22px;
+  padding: 15px 20px;
   cursor:pointer;
   color:var(--text-dark);
   font-size:16px;
@@ -3556,7 +3556,6 @@ body.fade-out {
     width:100%;
   }
 }
-
 
 
 
