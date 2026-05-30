@@ -136,7 +136,7 @@ body{
 }
 
 .back-link{
-  font-size:13px;
+  font-size:14px;
   color:var(--text-secondary);
   text-decoration:none;
   transition:.3s ease;
@@ -247,7 +247,7 @@ body{
 .legal-contact{
   display:flex;
   flex-direction:column;
-  gap:10px;
+  gap:8px;
 }
 
 .legal-contact a{
