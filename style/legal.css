@@ -375,7 +375,7 @@ body{
   }
 
   .back-link{
-    font-size:13px;
+    font-size:14px;
     padding-left:20px;
   }
 
@@ -496,7 +496,6 @@ body{
 @media (max-width:480px){
 
   .back-link{
-    font-size:12px;
     padding-left:16px;
   }
 
