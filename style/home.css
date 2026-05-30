@@ -3216,7 +3216,7 @@ body.fade-out {
   }
 
   .hero-title{
-    font-size:36px;
+    font-size:34px;
   }
 
   .hero-subtitle{
@@ -3226,6 +3226,7 @@ body.fade-out {
 
   .hero .btn-primary{
     max-width:280px;
+    padding:10px 26px;
   }
 
   .hero-meta{
