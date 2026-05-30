@@ -1751,6 +1751,7 @@ body.fade-out {
   display:flex;
   flex-direction:column;
   gap:14px;
+  margin-bottom: 0;
 }
 
 .faq .faq-card{
@@ -1779,11 +1780,10 @@ body.fade-out {
   background:none;
   border:none;
   text-align:left;
-  padding:22px 90px 22px 20px; /* increased right padding */
+  padding:22px 60px 22px 20px; /* increased right padding */
   cursor:pointer;
   color:var(--text-dark);
   font-size:16px;
-  padding-right: 20px !important;
   line-height:1.8;
   font-weight:500;
   position:relative;
@@ -1850,9 +1850,12 @@ body.fade-out {
   box-shadow:var(--shadow-soft);
 }
 
+.faq .faq-card:last-child.show{
+  margin-bottom: 40px;
+}
+
 .faq .faq-toggle{
   text-align:center;
-  margin-top:30px;
 }
 
 
