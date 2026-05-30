@@ -281,13 +281,44 @@ document.addEventListener("click", function(e) {
 });
 
 // Age Gate & Cookie Banner
+// Age Gate & Cookie Banner
 const ageGate = document.getElementById("ageGate");
-if (ageGate && localStorage.getItem("declan-age-confirmed")) ageGate.classList.add("hide");
+const enterSite = document.getElementById("enterSite");
 
-document.getElementById("enterSite")?.addEventListener("click", () => {
-  localStorage.setItem("declan-age-confirmed", "true");
-  ageGate.classList.add("hide");
-});
+let ageGateScrollPosition = 0;
+
+function lockAgeGate() {
+  ageGateScrollPosition = window.scrollY;
+  body.style.position = "fixed";
+  body.style.top = `-${ageGateScrollPosition}px`;
+  body.style.width = "100%";
+  body.style.overflow = "hidden";
+}
+
+function unlockAgeGate() {
+  body.style.position = "";
+  body.style.top = "";
+  body.style.width = "";
+  body.style.overflow = "";
+  window.scrollTo(0, ageGateScrollPosition);
+}
+
+if (ageGate) {
+  if (localStorage.getItem("declan-age-confirmed")) {
+    ageGate.classList.add("hide");
+  } else {
+    ageGate.classList.remove("hide");
+    lockAgeGate();           // Lock scroll when age gate shows
+  }
+}
+
+if (enterSite) {
+  enterSite.addEventListener("click", () => {
+    localStorage.setItem("declan-age-confirmed", "true");
+    ageGate.classList.add("hide");
+    unlockAgeGate();         // Unlock when user enters
+  });
+}
 
 const cookieBanner = document.getElementById("cookieBanner");
 if (cookieBanner && !localStorage.getItem("declanCookieConsent")) {
