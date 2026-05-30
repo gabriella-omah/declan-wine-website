@@ -1701,25 +1701,27 @@ body.fade-out {
 .faq{
   padding:100px 40px;
   background:var(--bg-warm);
-  position: relative;
-  overflow: hidden;
+  position:relative;
+  overflow:hidden;
 }
 
-.faq::before {
-  content: "";
-  position: absolute;
-  inset: 0;
+.faq::before{
+  content:"";
+  position:absolute;
+  inset:0;
   background:
     radial-gradient(circle at 25% 20%, rgba(214,178,94,0.05), transparent 55%),
     radial-gradient(circle at 80% 80%, rgba(0,0,0,0.03), transparent 60%);
-  pointer-events: none;
+  pointer-events:none;
 }
 
 .faq .faq-container{
   max-width:890px;
   margin:auto;
-  position: relative;
+  position:relative;
 }
+
+/* ================= HEADER ================= */
 
 .faq .faq-header{
   text-align:center;
@@ -1735,8 +1737,8 @@ body.fade-out {
   line-height:1.15;
   color:var(--text-dark);
   margin-bottom:15px;
-  text-transform: capitalize;
-  font-weight: 600;
+  text-transform:capitalize;
+  font-weight:600;
 }
 
 .faq .faq-header p{
@@ -1744,26 +1746,33 @@ body.fade-out {
   font-size:16px;
   line-height:1.8;
   max-width:680px;
-  margin: 0 auto;
+  margin:0 auto;
 }
+
+/* ================= FAQ LIST ================= */
 
 .faq .faq-list{
   display:flex;
   flex-direction:column;
-  gap:14px;
-  margin-bottom: 0;
 }
 
+/* gap between cards WITHOUT leaving space after last card */
+.faq .faq-card:not(:last-child){
+  margin-bottom:14px;
+}
+
+/* ================= FAQ CARD ================= */
+
 .faq .faq-card{
-  background: rgba(246, 239, 232, 0.92); /* warm paper surface */
-  border: 1px solid rgba(0,0,0,0.06);
+  background:rgba(246,239,232,0.92);
+  border:1px solid rgba(0,0,0,0.06);
   border-radius:var(--radius-md);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  box-shadow:0 10px 30px rgba(0,0,0,0.05);
   overflow:hidden;
   transition:
-  border-color .4s ease,
-  transform .4s ease,
-  background .4s ease;
+    border-color .4s ease,
+    transform .4s ease,
+    background .4s ease;
 }
 
 .faq .faq-card:hover{
@@ -1780,7 +1789,7 @@ body.fade-out {
   background:none;
   border:none;
   text-align:left;
-  padding:22px 60px 22px 20px; /* increased right padding */
+  padding:22px 95px 22px 20px;
   cursor:pointer;
   color:var(--text-dark);
   font-size:16px;
@@ -1792,9 +1801,11 @@ body.fade-out {
 .faq .faq-question::after{
   content:"+";
   position:absolute;
-  right:28px;
+  right:24px;
   top:50%;
   transform:translateY(-50%);
+  width:24px;
+  text-align:center;
   font-size:22px;
   font-weight:300;
   color:var(--accent-gold);
@@ -1808,15 +1819,15 @@ body.fade-out {
 .faq .faq-answer{
   max-height:0;
   overflow:hidden;
-  color: var(--text-muted);
+  color:var(--text-muted);
   opacity:0;
-  line-height: 1.8;
+  line-height:1.8;
+  font-size:15px;
   padding:0 20px;
-  font-size: 15px;
   transition:
-  max-height .7s cubic-bezier(.22,.61,.36,1),
-  opacity .5s ease,
-  padding .5s ease;
+    max-height .7s cubic-bezier(.22,.61,.36,1),
+    opacity .5s ease,
+    padding .5s ease;
 }
 
 .faq .faq-card.active .faq-answer{
@@ -1831,14 +1842,14 @@ body.fade-out {
   transform:translateY(-15px);
   pointer-events:none;
   overflow:hidden;
-  padding: 0;
+  padding:0;
   margin:0;
   border:none;
-  box-shadow: none;
+  box-shadow:none;
   transition:
-  max-height .8s cubic-bezier(.22,.61,.36,1),
-  opacity .5s ease,
-  transform .7s ease;
+    max-height .8s cubic-bezier(.22,.61,.36,1),
+    opacity .5s ease,
+    transform .7s ease;
 }
 
 .faq .faq-card.show{
@@ -1850,12 +1861,13 @@ body.fade-out {
   box-shadow:var(--shadow-soft);
 }
 
-.faq .faq-card:last-child.show{
-  margin-bottom: 40px;
+.faq .faq-card.show:not(:last-child){
+  margin-bottom:14px;
 }
 
 .faq .faq-toggle{
   text-align:center;
+  margin-top:30px;
 }
 
 
