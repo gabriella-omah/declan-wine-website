@@ -1798,7 +1798,7 @@ body.fade-out {
 
 .faq .faq-question span {
   flex: 1;                    /* Takes all available space */
-  padding-right: 40px;        /* Space between text and + */
+  padding-right: 10px;        /* Space between text and + */
 }
 
 .faq .faq-question::after{
