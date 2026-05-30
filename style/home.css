@@ -1784,13 +1784,12 @@ body.fade-out {
   background:none;
   border:none;
   text-align:left;
-  padding:22px20px;
+  padding:22px 20px;
   cursor:pointer;
   color:var(--text-dark);
   font-size:16px;
   line-height:1.8;
   font-weight:500;
-  padding-right: 50px !important;
   margin-right: 200px !important;
   position:relative;
 }
