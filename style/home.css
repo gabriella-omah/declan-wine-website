@@ -1750,7 +1750,7 @@ body.fade-out {
 .faq .faq-list{
   display:flex;
   flex-direction:column;
-  gap:16px;
+  gap:14px;
 }
 
 .faq .faq-card{
