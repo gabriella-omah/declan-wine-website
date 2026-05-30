@@ -58,16 +58,27 @@ h1, h2, h3, h4 {
    (we will refine later, no structure logic yet)
 ========================= */
 
-section {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
-  will-change: opacity, transform;
+
+/* Prevent background scrolling when menu is open */
+body.no-scroll {
+  position: fixed;
+  width: 100%;
+  overflow: hidden;
 }
 
-section.visible {
-  opacity: 1;
-  transform: translateY(0);
+/* Make sure menu is above everything */
+.mobile-menu {
+  z-index: 10000;
+}
+
+
+/* Prevent any scroll while menu is open */
+body {
+  transition: none;
+}
+
+.mobile-menu {
+  transition: right 0.4s cubic-bezier(0.77, 0, 0.18, 1);
 }
 
 .hero,
@@ -211,6 +222,17 @@ body.fade-out {
   pointer-events: all;
 }
 
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.7s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 /* ================= HEADER ================= */
 
@@ -360,7 +382,6 @@ body.fade-out {
     transform 0.25s ease,
     box-shadow 0.25s ease;
 }
-
 
 .header .shop-btn:hover{
   background: var(--accent-gold);
@@ -603,7 +624,7 @@ body.fade-out {
 
 .hero .btn-primary{
   padding: 14px 30px;
-  font-size: 12px;
+  font-size: 13px;
   letter-spacing: 0.14em;
 }
 
@@ -616,7 +637,7 @@ body.fade-out {
 
 .hero-meta span{
   padding: 10px 14px;
-  font-size: 11px;
+  font-size: 13px;
   border-radius: 999px;
   background: rgba(255,255,255,0.05);
   border:
@@ -1762,6 +1783,7 @@ body.fade-out {
   cursor:pointer;
   color:var(--text-dark);
   font-size:16px;
+  padding-right: 20px !important;
   line-height:1.8;
   font-weight:500;
   position:relative;
@@ -1806,7 +1828,7 @@ body.fade-out {
 .faq .faq-card.hidden{
   max-height:0;
   opacity:0;
-  transform:translateY(-25px);
+  transform:translateY(-15px);
   pointer-events:none;
   overflow:hidden;
   padding: 0;
@@ -2298,6 +2320,7 @@ body.fade-out {
 .age-gate-actions .btn-primary,
 .age-gate-actions .btn-secondary{
   min-width:170px;
+  justify-content: center;
 }
 
 .age-gate-modal small{
@@ -3419,15 +3442,6 @@ body.fade-out {
   .testimonials .testimonial-quote { 
     font-size: 20px; 
   }
-
-  .floating-buttons { 
-    right: 15px; 
-    bottom: 15px; 
-  }
-  .float-btn { 
-    width: 48px; 
-    height: 48px; 
-  }
 }
 
 @media (max-width: 400px) {
@@ -3494,6 +3508,7 @@ body.fade-out {
 @media (max-width:768px){
   .age-gate{
     width: 85vw;
+    margin: 0 auto;
   }
 
   .age-gate-modal{
