@@ -1800,6 +1800,7 @@ body.fade-out {
   content:"+";
   position:absolute;
   right:24px;
+  padding-left: 500px;
   top:50%;
   transform:translateY(-50%);
   text-align:center;
