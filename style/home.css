@@ -2944,6 +2944,10 @@ body.fade-out {
     margin: 60px auto 0;
   }
 
+  .footer .footer-bottom p{
+    order: 1;
+  }
+
   .footer .footer-mini-links,
   .footer .footer-bottom p{
     justify-content: center;
@@ -3161,7 +3165,7 @@ body.fade-out {
   }
 
   .footer {
-    padding: 60px 20px 40px;
+    padding: 60px 20px 20px;
   }
 
   .footer .footer-brand h3 {
@@ -3179,6 +3183,10 @@ body.fade-out {
 
   .footer .footer-newsletter p {
     max-width: 85vw;
+  }
+
+  .footer .footer-mini-links a{
+    font-size: 14px;
   }
 }
 
